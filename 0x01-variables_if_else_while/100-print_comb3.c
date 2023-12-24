@@ -11,15 +11,15 @@ int main(void)
 {
 	int i;
 	int j;
-	int char_zero = 48;
-	int char_nine = 57;
+	int zero = 48;
+	int nine = 57;
 	int new_line = 10;
 	int comma = 44;
 	int space = 32;
 
-	for (i = char_zero; i <= char_nine; i++)
+	for (i = zero; i <= nine; i++)
 	{
-		for (j = char_zero + 1; j <= char_nine; j++)
+		for (j = zero + 1; j <= nine; j++)
 		{
 			if (i > j || i == j)
 				continue;
@@ -27,7 +27,7 @@ int main(void)
 			putchar(i);
 			putchar(j);
 
-			if (i != char_nine - 1 || j != char_nine)
+			if (i != nine - 1 || j != nine)
 			{
 				putchar(comma);
 				putchar(space);
