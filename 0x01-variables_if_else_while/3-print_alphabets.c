@@ -8,10 +8,10 @@
 */
 int main(void)
 {
-	int lower_case_begin = 65;
-	int lower_case_end = 90;
-	int upper_case_begin = 97;
-	int upper_case_end = 122;
+	int lower_case_begin = 97;
+	int lower_case_end = 122;
+	int upper_case_begin = 65;
+	int upper_case_end = 90;
 
 	while (lower_case_begin <= lower_case_end)
 	{
