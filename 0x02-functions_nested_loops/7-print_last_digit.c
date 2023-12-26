@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _abs - computes the absolute value of an integer
@@ -23,17 +24,25 @@ int _abs(int n)
 */
 int print_last_digit(int n)
 {
-	int ten = 10;
+	int pos_ten = 10;
+	int neg_ten = -10;
 	int last_digit;
-	int abs_n = _abs(n);
 
-	if (abs_n < ten)
+	if (n < 0 && n > neg_ten)
 	{
-		last_digit = abs_n;
+		last_digit = _abs(n);
 	}
-	else
+	if (n < 0 && n <= neg_ten)
 	{
-		last_digit = abs_n % ten;
+		last_digit = _abs(n % neg_ten);
+	}
+	if (n >= 0 && n < pos_ten)
+	{
+		last_digit = n;
+	}
+	if (n >= 0 && n >= pos_ten)
+	{
+		last_digit = n % pos_ten;
 	}
 
 	_putchar('0' + last_digit);
