@@ -19,21 +19,17 @@ void times_table(void)
 		for (j = 0; j <= multiplier; j++)
 		{
 			prod = i * j;
-			if (!(prod / 100))
+
+			if (j != 0)
 			{
-				_putchar(' ');
-			}
-			else
-			{
-				_putchar('0' + (prod / 100));
-			}
-			if (!(prod / 10))
-			{
-				_putchar(' ');
-			}
-			else
-			{
-				_putchar('0' + (prod / 10));
+				if (!(prod / 10))
+				{
+					_putchar(' ');
+				}
+				else
+				{
+					_putchar('0' + (prod / 10));
+				}
 			}
 			_putchar('0' + (prod % 10));
 
