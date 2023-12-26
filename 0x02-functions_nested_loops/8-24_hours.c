@@ -6,42 +6,27 @@
 */
 void jack_bauer(void)
 {
-	int ceil_hr_ten = 2;
-	int ceil_hr_unit = 10;
-	int ceil_min_ten = 6;
-	int ceil_min_unit = 10;
-	int hr_ten = 0;
-	int hr_unit = 0;
-	int min_ten = 0;
-	int min_unit = 0;
+	int ceil_hr = 23;
+	int ceil_min = 59;
 	int colon = 58;
+	int i = 0;
+	int j = 0;
 
-	while (hr_ten <= ceil_hr_ten)
+	while (i <= ceil_hr)
 	{
-		while (hr_unit < ceil_hr_unit)
+		while (j <= ceil_min)
 		{
-			while (min_ten < ceil_min_ten)
-			{
-				while (min_unit < ceil_min_unit)
-				{
-					_putchar('0' + hr_ten);
-					_putchar('0' + hr_unit);
-					_putchar(colon);
-					_putchar('0' + min_ten);
-					_putchar('0' + min_unit);
-					_putchar('\n');
-					min_unit++;
-				}
-				min_unit = 0;
-				min_ten++;
-			}
-			min_ten = 0;
-			hr_unit++;
+			_putchar('0' + (i / 10));
+			_putchar('0' + (i % 10));
+			_putchar(colon);
+			_putchar('0' + (j / 10));
+			_putchar('0' + (j % 10));
+			_putchar('\n');
 
-			if (hr_ten == 2)
-				ceil_hr_unit = 4;
+
+			j++;
 		}
-		hr_unit = 0;
-		hr_ten++;
+		i++;
+		j = 0;
 	}
 }
