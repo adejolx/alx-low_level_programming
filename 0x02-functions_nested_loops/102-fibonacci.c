@@ -17,7 +17,7 @@ int main(void)
 	printf("%ld, ", curr);
 	printf("%ld", next);
 
-	for (i = 3; i < n; i++)
+	for (i = 3; i <= n; i++)
 	{
 		printf(", ");
 
