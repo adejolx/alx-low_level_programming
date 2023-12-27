@@ -9,7 +9,7 @@ void print_times_table(int n)
 	int i, j;
 	int prod, floor = 0, ceil = 15, multiplier = n, multiplicand = n;
 
-	if (n > floor && n < ceil)
+	if (n >= floor && n <= ceil)
 	{
 		for (i = 0; i <= multiplicand; i++)
 		{
