@@ -33,8 +33,6 @@ int main(void)
 
 		if (i != 98)
 			printf(", ");
-		if (i % 10 == 0)
-			printf("\n");
 	}
 
 	printf("\n");
