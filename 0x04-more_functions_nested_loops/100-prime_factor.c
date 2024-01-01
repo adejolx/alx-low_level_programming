@@ -15,7 +15,7 @@ void prime_factor(void)
 			num = num / div;
 		div++;
 	}
-	printf("%lu\n", div);
+	printf("%lu\n", div - 1);
 }
 
 /**
