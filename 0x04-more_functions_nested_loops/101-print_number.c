@@ -10,21 +10,21 @@
 
 void print_number(int n)
 {
-	int tens;
+	int units;
 
-	if (n > INT_MIN && n < INT_MAX)
+	if (n >= INT_MIN && n <= INT_MAX)
 	{
 		if (n < 0)
 		{
-			_putchar(45);
+			_putchar('-');
 			n = -n;
 		}
 
 		if ((n / 10) > 0)
 		{
 			print_number(n / 10);
-			tens =	n % 10;
-			_putchar('0' + tens);
+			units =	n % 10;
+			_putchar('0' + units);
 		}
 		else
 		_putchar('0' + n);
