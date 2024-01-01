@@ -12,28 +12,29 @@ void fizz_buzz(void)
 
 	for (i = _floor; i <= _ceil; i++)
 	{
-		if (i != _floor)
-			printf("%c", ' ');
-
-		printf("%d", i);
 
 		if (i % 3 == 0 && i % 5 == 0)
 		{
 			printf("%s", " FizzBuzz");
-			i++;
+			continue;
 		}
 
 		else if (i % 3 == 0)
 		{
 			printf("%s", " Fizz");
-			i++;
+			continue;
 		}
 
 		else if (i % 5 == 0)
 		{
 			printf("%s", " Buzz");
-			i++;
+			continue;
 		}
+
+		if (i != _floor)
+			printf("%c", ' ');
+
+		printf("%d", i);
 	}
 	printf("\n");
 }
