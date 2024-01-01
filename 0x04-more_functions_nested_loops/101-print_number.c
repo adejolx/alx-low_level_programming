@@ -10,7 +10,7 @@
 
 void print_number(int n)
 {
-	int units;
+	unsigned int units;
 
 	if (n >= INT_MIN && n <= INT_MAX)
 	{
