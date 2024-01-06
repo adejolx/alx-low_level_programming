@@ -23,5 +23,6 @@ char *leet(char *c)
 		i = 0;
 		c++;
 	}
+	*c = '\0';
 	return (c);
 }

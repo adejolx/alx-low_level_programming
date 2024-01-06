@@ -23,5 +23,6 @@ char *rot13(char *s)
 		i = 0;
 		s++;
 	}
+	*s = '\0';
 	return (s);
 }
