@@ -7,22 +7,22 @@ char *rot13(char *s)
 {
 	char *alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char *rot13 = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
-	int i = 0, alpha_len = 52;
+	int a = 0, i = 0, alpha_len = 52;
 
-	while (*s)
+	while (s[a])
 	{
 		while (i < alpha_len)
 		{
-			if (*s == alpha[i])
+			if (s[a] == alpha[i])
 			{
-				*s = rot13[i];
+				s[a] = rot13[i];
 				break;
 			}
 			i++;
 		}
 		i = 0;
-		s++;
+		a++;
 	}
-	*s = '\0';
+	s[a] = '\0';
 	return (s);
 }

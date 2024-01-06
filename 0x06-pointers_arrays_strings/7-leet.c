@@ -7,22 +7,22 @@
 char *leet(char *c)
 {
 	char *code = "43071";
-	int i = 0;
+	int a = 0, i = 0;
 
-	while (*c)
+	while (c[a])
 	{
 		while (i < 5)
 		{
-			if (*c == "aeotl"[i] || *c == "AEOTL"[i])
+			if (c[a] == "aeotl"[i] || c[a] == "AEOTL"[i])
 			{
-				*c = code[i];
+				c[a] = code[i];
 				break;
 			}
 			i++;
 		}
 		i = 0;
-		c++;
+		a++;
 	}
-	*c = '\0';
+	c[a] = '\0';
 	return (c);
 }
