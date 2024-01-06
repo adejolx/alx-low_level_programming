@@ -5,35 +5,22 @@
 */
 char *rot13(char *s)
 {
-	int up_a = 65, up_z = 90, low_a = 97, low_z = 122, rem;
+	char *alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char *rot13 = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	int i = 0, alpha_len = 52;
 
 	while (*s)
 	{
-		if (*s >= up_a && *s <= up_z)
+		while (i < alpha_len)
 		{
-			if (*s + 13 > up_z)
+			if (*s == alpha[i])
 			{
-				rem = 13 - (up_z - *s);
-				*s = (up_a - 1) + rem;
+				*s = rot13[i];
+				break;
 			}
-			else
-			{
-				*s += 13;
-			}
+			i++;
 		}
-
-		if (*s >= low_a && *s <= low_z)
-		{
-			if (*s + 13 > low_z)
-			{
-				rem = 13 - (low_z - *s);
-				*s = (low_a - 1) + rem;
-			}
-			else
-			{
-				*s += 13;
-			}
-		}
+		i = 0;
 		s++;
 	}
 	return (s);
