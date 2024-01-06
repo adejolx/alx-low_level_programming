@@ -5,7 +5,8 @@
 */
 void print_number(int n)
 {
-	int abs_n, sign;
+	int sign;
+	unsigned int abs_n;
 
 	if (n < 0)
 	{
